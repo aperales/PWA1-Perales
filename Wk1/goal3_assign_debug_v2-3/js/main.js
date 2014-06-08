@@ -5,15 +5,23 @@
 (function(){
 
 //variables for results
+    //variables given to search for results
     var resultsDIV = document.getElementById("results"),
+        //variable for the input search
         searchInput = document.forms[0].search,
         currentSearch = ''
         ;
 
     // Validates search query
+    //variables and function for information entered into the search and sent to tell user that the search info has limited
+    //lenght of characters
+    //==Expecting conditonal statement and this is assignning a variable
     var validqte == function(query){
 
         // Trim whitespace from start and end of search query
+        //sending funstion if a certain amount of chararcters are sent will give alert
+        //or will submit search
+
         while(query.charAt(0) = " "){
             query = query.substring(1, query.length);
         };
@@ -67,8 +75,7 @@ console.log(validqte)
                 results.sort();
 
                 // Check that matches were found, and run output functions
-                if(results.length = 0){
-                    noMatch();
+                if(results.length = 0){noMatch();
                 }else{
                     showMatches(results);
                 };
