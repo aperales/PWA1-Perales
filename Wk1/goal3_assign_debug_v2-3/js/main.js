@@ -12,6 +12,7 @@
         currentSearch = ''
         ;
 
+
     // Validates search query
     //variables and function for information entered into the search and sent to tell user that the search info has limited
     //lenght of characters
@@ -28,7 +29,8 @@
         while(query.charAt(query.length-1) === ""){
             query = query.substring(0, query.length-1);
             ;
-
+//send info with alert to user 3 charaters needed
+            //search will submit if greater than 3 charactes
             // Check search length, must have 3 characters
             if(query.length < 3){
                 alert("Your search query is too small, try again.);
@@ -92,7 +94,7 @@ console.log(validqte)
 
             // Put matches into page as paragraphs with anchors
             var showMatches = function(results){
-
+console.log(showMatches);
                 // THE NEXT 4 LINES ARE CORRECT.
                 var html = '<p>Results</p>',
                     title,
