@@ -19,7 +19,7 @@
 //player health
     var playerOneHealth = 100;
     var playerTwoHealth = 100;
-
+//start round
     var round = 0;
 
     function fight() {
