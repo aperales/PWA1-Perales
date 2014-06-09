@@ -42,8 +42,9 @@
 console.log(validqte)
             search(query);
         };
-
+//after search has been found will send results using these variables and list results on window
         // Finds search matches
+
         var search = function(query)
 
         // split the user's search query string into an array
