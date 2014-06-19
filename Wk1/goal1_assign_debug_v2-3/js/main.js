@@ -17,7 +17,7 @@
     //variables and function for information entered into the search and sent to tell user that the search info has limited
     //lenght of characters
     //==Expecting conditonal statement and this is assignning a variable
-    var validqte == function(query){
+    var validqte = function(query){
 
         // Trim whitespace from start and end of search query
         //sending funstion if a certain amount of chararcters are sent will give alert
