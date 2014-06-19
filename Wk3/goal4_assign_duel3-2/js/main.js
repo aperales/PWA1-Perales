@@ -1,7 +1,7 @@
 /**
  * Created by Alberto Perales  on 6/18/14.
  */
-(function() {
+(function(){
 
     console.log(" ** Fight **"); //Print Title to console
 
@@ -19,13 +19,13 @@
     //Array for both fighters
     var fighters = [
         {
-            name: "WonderWoman",
+            name: "Kabal",
             damage: 20,
             health: 100
 
         },
         {
-            name: "BlackWidow",
+            name: "Kratos",
             damage: 20,
             health: 100
         }];
@@ -38,22 +38,22 @@
 
     //FIGHT function
     function fight(){
-
+        //alert commented off
         //alert(fighters[0].name+":"+fighters[0].health+"  *START*  "+fighters[1].name+':'+fighters[1].health);
-        fighter1_txt.innerHTML = figthers[0].name + ":" + fighters[0].health;
+        fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
         fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
-            //damage
+            //damage formula for each of the fighters
             var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage * .5);
             var f2 = Math.floor(Math.random() * fighters[1].damage + fighters[1].damage * .5);
 
             //inflict damage
-            fighters[0].health -= f1;
-            fighters[1].health -= f2;
+            fighters[0].health -= f1;//inflicting damage on fighter 0
+            fighters[1].health -= f2;//inflicting damage on fighter 1
 
             console.log(fighters[0].health, fighters[1].health);
 
-            //check for winning fighter
+            //winner check variable  with innerHTML
             var result = winnerCheck();
             console.log(result);
 
@@ -68,7 +68,7 @@
                 fighter1_txt.innerHTML = result;
                 fighter2_txt.innerHTML = "";
 
-                //DIsable button
+                //DIsable button for end of fight
                 button.removeEventListener("click", fight, false);
 
                 document.querySelector('.buttonblue').innerHTML = 'DONE!!!';
@@ -77,30 +77,23 @@
 
 
 
-        function winnerCheck(){
-            console.log("in winnerCheck FN");
-            var result = "no winner";
-            if (fighters[0].health < 1 && fighters[1].health < 1)
-            {
-                result = "You Both Die - GAME OVER";
-            } else if (fighters[0].health < 1){
-                result = fighters[1].name + "WINS!!!"
-            } else if (fighters[1].health < 1)
-            {
-                result = fighters[0].name + "WINS!!!"
-            }
-            return result;
+    function winnerCheck(){//winner check function for HTML result for fighters 
 
-        }
+         var result = "no winner";
+         if (fighters[0].health < 1 && fighters[1].health < 1)
+         {
+             result = "You Both Die - GAME OVER";
+         } else if (fighters[0].health < 1){
+             result = fighters[1].name + "WINS!!!"
+         } else if (fighters[1].health < 1)
+         {
+             result = fighters[0].name + "WINS!!!"
+         }
+        return result;
 
+    }
 
-        //Program starts
-        console.log('program start');
-        fight();
-
-
-
-});
+})();
 
 
 
