@@ -11,7 +11,7 @@
     var round_txt = document.querySelector("h5");
     var button = document.getElementById("fight_btn");
 
-    console.log()
+    console.log();
 
     //Set up click event
     button.addEventListener("click", fight, false);
@@ -75,15 +75,33 @@
             }
     }
 
-    function winnerCheck() {
-        var result = "no winner";
-        if (fighters[0].health < 1 && fighters[1].health < 1)
-        {
-    }
+
+
+        function winnerCheck(){
+            console.log("in winnerCheck FN");
+            var result = "no winner";
+            if (fighters[0].health < 1 && fighters[1].health < 1)
+            {
+                result = "You Both Die - GAME OVER";
+            } else if (fighters[0].health < 1){
+                result = fighters[1].name + "WINS!!!"
+            } else if (fighters[1].health < 1)
+            {
+                result = fighters[0].name + "WINS!!!"
+            }
+            return result;
+
+        }
+
+
+        //Program starts
+        console.log('program start');
+        fight();
 
 
 
-}
+});
+
 
 
 
