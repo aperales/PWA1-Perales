@@ -77,7 +77,7 @@
 
 
 
-    function winnerCheck(){//winner check function for HTML result for fighters 
+    function winnerCheck(){//winner check function for HTML result for fighters
 
          var result = "no winner";
          if (fighters[0].health < 1 && fighters[1].health < 1)
