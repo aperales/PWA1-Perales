@@ -12,7 +12,7 @@
     window.Person=Person;
 
     //finds all jobs that are possible for person
-    Person.jobs = ["teacher","actor","student","pilot"];
+    Person.jobs = ["teacher","artist","painter","player"];
     Person.actions = ["sleeping","eating","working"];
 
     function Person(name,row){
